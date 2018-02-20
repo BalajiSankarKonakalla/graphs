@@ -19,4 +19,14 @@ public class BinaryTree {
     public boolean is_leaf(){
         return right == null && left == null;
     }
+
+    static void inOrder(BinaryTree t){
+        if(t.is_leaf())
+            System.out.println("-->" + t.value);
+        else {
+            inOrder(t.left);
+            System.out.println("-->" + t.value);
+            inOrder(t.right);
+        }
+    }
 }
